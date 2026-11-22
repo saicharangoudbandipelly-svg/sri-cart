@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SRICART - Adilabad</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Inter',sans-serif}
+body{background:#f0f3ec;padding-bottom:90px;color:#111}
+.top{padding:10px 14px 12px;background:#fff;border-radius:0 0 24px 24px;position:sticky;top:0;z-index:20}
+.head{display:flex;justify-content:space-between;align-items:center}
+.logo{display:flex;align-items:center;gap:8px}
+.logo-icon{width:48px;height:48px;background:#0b4d2e;border-radius:50%;display:flex;align-items:center;justify-content:center;color:#fff;font-weight:900;border:2.5px solid #a3d49c}
+.logo b{font-size:22px;color:#0b4d2e;letter-spacing:-0.5px}
+.icons{display:flex;gap:8px}
+.icons div{width:42px;height:42px;background:#f1f5ec;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:18px}
+.deliver{margin-top:10px;display:flex;align-items:center;gap:6px;font-size:14px;color:#555}
+.pill{background:#dff0d9;color:#0b4d2e;padding:6px 12px;border-radius:20px;font-weight:700;display:flex;align-items:center;gap:4px;border:1px solid #c8e4c0}
+.search{margin-top:10px;background:#f1f5ec;border:1.5px solid #e2eedb;padding:13px 14px;border-radius:16px;display:flex;gap:10px;align-items:center}
+.search input{border:none;outline:none;background:none;width:100%;font-size:15px;color:#333}
+
+/* HERO */
+.hero{height:460px;background:linear-gradient(90deg,rgba(0,60,20,0.95) 0%,rgba(0,60,20,0.7) 40%,rgba(0,60,20,0.1) 75%), url('https://images.unsplash.com/photo-1542838132-92c53300491e?w=1000&q=80');background-size:cover;background-position:center;padding:28px 18px;color:#fff;position:relative;display:flex;flex-direction:column;justify-content:center}
+.hero h1{font-size:38px;line-height:1.1;font-weight:900}
+.hero p{margin-top:8px;font-size:16px;opacity:.9}
+.btn-green{background:#2e9a44;color:#fff;border:none;padding:14px 22px;border-radius:30px;font-size:16px;font-weight:700;display:inline-flex;align-items:center;gap:8px;margin-top:16px;width:fit-content}
+.dots{position:absolute;bottom:18px;left:18px;display:flex;gap:6px}
+.dot{width:8px;height:8px;background:#ffffff55;border-radius:20px}
+.dot.active{width:28px;background:#fff}
+
+/* WHITE WRAPPER */
+.wrap{background:#f6f6f2;margin-top:-22px;border-radius:28px 28px 0 0;padding:22px 14px 10px;position:relative;z-index:2}
+.wrap h2{font-size:22px;font-weight:800}
+.wrap .sub{color:#777;font-size:14px;margin-top:3px}
+
+/* GRID */
+.grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:10px;margin-top:14px}
+.card{border-radius:20px;padding:12px;min-height:145px;display:flex;flex-direction:column;justify-content:space-between;position:relative;border:1px solid #00000008}
+.card .top-icon{width:48px;height:48px;border-radius:14px;background:#fff;display:flex;align-items:center;justify-content:center;font-size:22px}
+.card .arrow{position:absolute;top:10px;right:10px;width:28px;height:28px;background:#00000014;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:12px}
+.card h3{font-size:16px;font-weight:800;margin-top:28px}
+.card span{font-size:12px;color:#555}
+.c-shop{background:linear-gradient(135deg,#0a5a2e,#0e8a44);color:#fff}.c-shop span{color:#d6f0d0}
+.c-shop .top-icon{background:#ffffff22;color:#fff}
+.c-green{background:#eaf2e3}.c-orange{background:#fff0df}.c-yellow{background:#fff7d9}.c-blue1{background:#e6f0f7}.c-pink1{background:#f5ece6}.c-light{background:#f0f1f1}
+
+/* Request Anything */
+.req{background:linear-gradient(90deg,#0a6b2e,#1f9d3e);border-radius:22px;padding:16px;display:flex;align-items:center;gap:12px;color:#fff;margin-top:20px}
+.req .icon{font-size:32px}
+.req h3{font-size:18px}
+.req p{font-size:12px;opacity:.9}
+.req button{background:#fff;color:#0a6b2e;border:none;padding:10px 16px;border-radius:20px;font-weight:700;margin-left:auto}
+
+/* Bulk */
+.bulk{background:radial-gradient(circle at top right,#2a7a3a,#0a3d1f);border-radius:24px;padding:18px;color:#fff;margin-top:16px;position:relative;overflow:hidden;border:4px solid #f9e08a0f}
+.badge{background:#ffd85e;color:#000;padding:5px 12px;border-radius:20px;font-size:11px;font-weight:800;letter-spacing:1px}
+.bulk h2{font-size:26px;line-height:1.1;margin-top:10px;font-weight:900}
+.bulk p{font-size:13px;opacity:.85;margin-top:8px}
+.tags{display:flex;gap:8px;flex-wrap:wrap;margin-top:12px}
+.tag{background:#ffffff18;padding:6px 12px;border-radius:20px;font-size:12px;border:1px solid #ffffff22}
+.bulk-btn{background:#ffd85e;color:#111;border:none;width:100%;padding:14px;border-radius:16px;font-weight:800;font-size:16px;margin-top:14px;display:flex;justify-content:space-between;align-items:center}
+
+/* Local Homemade */
+.sec{margin-top:22px}
+.sec-head{display:flex;justify-content:space-between;align-items:center}
+.view{background:#e2ecd9;padding:8px 14px;border-radius:20px;font-size:13px;font-weight:700;color:#0b4d2e}
+.products{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:10px}
+.prod{border-radius:18px;overflow:hidden;height:200px;position:relative;background:#ddd}
+.prod img{width:100%;height:100%;object-fit:cover}
+.prod-info{position:absolute;bottom:0;left:0;right:0;background:linear-gradient(transparent,rgba(0,0,0,0.8));padding:10px;color:#fff}
+.prod-info h4{font-size:15px}
+.prod-info b{font-size:16px}
+
+/* Horizontal Scroll */
+.hscroll{display:flex;gap:12px;overflow-x:auto;padding-bottom:6px;margin-top:10px}
+.hscroll::-webkit-scrollbar{display:none}
+.item-card{min-width:160px;background:#fff;border-radius:18px;padding:8px;border:1px solid #eee}
+.item-card img{width:100%;height:110px;object-fit:cover;border-radius:12px;background:#f5f5f5}
+.item-card h4{font-size:14px;margin-top:6px}
+.item-card .price{color:#0b6a2e;font-weight:800;font-size:15px;margin-top:2px}
+.order{width:100%;background:#0b6a2e;color:#fff;border:none;padding:8px;border-radius:12px;font-weight:700;margin-top:6px;font-size:13px}
+.plus{width:48px;height:48px;background:#0b6a2e;border-radius:50%;display:flex;align-items:center;justify-content:center;color:#fff;font-size:24px;position:absolute;top:60px;right:8px;border:3px solid #fff}
+
+/* Plans */
+.plans{background:linear-gradient(135deg,#0d5a2e,#1a8a44);border-radius:22px;padding:18px;color:#fff;margin-top:20px}
+.plan-row{display:flex;gap:10px;overflow-x:auto;margin-top:12px}
+.plan{background:#ffffff18;border:1px solid #ffffff33;border-radius:16px;padding:12px;min-width:135px}
+.plan b{font-size:14px}
+.plan p{font-size:13px;opacity:.8}
+.view-plans{background:#fff;color:#0b4d2e;width:100%;padding:14px;border-radius:14px;border:none;font-weight:800;margin-top:14px}
+
+/* Planning */
+.plan-grid{display:grid;grid-template-columns:1fr 1fr 1fr;background:#fff;border-radius:18px;overflow:hidden;margin-top:10px;border:1px solid #eee}
+.plan-grid div{padding:16px 10px;text-align:center;border-right:1px solid #eee}
+.plan-grid div:last-child{border:none}
+.plan-grid .ic{width:48px;height:48px;border-radius:14px;margin:auto;display:flex;align-items:center;justify-content:center;font-size:22px;background:#fff6d6}
+
+/* Brand */
+.brand{background:linear-gradient(135deg,#0a3d1f,#1d7a36);border-radius:26px;padding:20px;color:#fff;margin-top:20px;position:relative}
+.brand h2{font-size:28px;line-height:1.15;font-weight:900}
+.brand h2 span{color:#ffe27a}
+.brand p{font-size:14px;opacity:.9;margin-top:10px;line-height:1.4}
+.join{background:#ffe27a;color:#000;border:none;padding:14px 20px;border-radius:16px;font-weight:800;font-size:16px;margin-top:14px}
+.whats{background:transparent;border:1.5px solid #ffffff88;color:#fff;padding:12px 16px;border-radius:16px;width:100%;font-weight:700;margin-top:10px}
+.small-tags{display:flex;gap:8px;flex-wrap:wrap;margin-top:14px}
+.small-tags span{border:1px solid #ffffff44;padding:8px 14px;border-radius:20px;font-size:13px;display:flex;gap:6px;align-items:center}
+
+/* Bottom Nav */
+.bottom{position:fixed;bottom:0;left:0;right:0;background:#fff;display:flex;justify-content:space-around;padding:10px 0 8px;border-top:1px solid #eee;border-radius:22px 22px 0 0;z-index:50}
+.nav{display:flex;flex-direction:column;align-items:center;font-size:11px;color:#888;gap:2px}
+.nav.active{color:#0b6a2e;font-weight:700}
+.nav .ico{font-size:20px}
+.live{margin-top:16px;background:#e8f3e2;padding:12px 14px;border-radius:14px;display:flex;justify-content:space-between;align-items:center;font-size:13px;font-weight:700;color:#0b4d2e}
+</style>
+</head>
+<body>
+
+<div class="top">
+<div class="head">
+<div class="logo"><div class="logo-icon">S</div><b>SRICART</b></div>
+<div class="icons"><div>🔔</div><div>📞</div><div>🗂️</div></div>
+</div>
+<div class="deliver">Delivering to: <div class="pill">📍 Adilabad ▾</div></div>
+<div class="search">🔍 <input placeholder="Search products, pages, services..."></div>
+</div>
+
+<div class="hero" id="hero">
+<h1 id="heroTitle">Order now</h1>
+<p id="heroSub">Be the first in our list</p>
+<button class="btn-green" id="heroBtn">Explore →</button>
+<div class="dots"><div class="dot"></div><div class="dot active"></div></div>
+</div>
+
+<div class="wrap">
+<h2>What do you need today?</h2>
+<div class="sub">Everything you need, just a tap away.</div>
+
+<div class="grid">
+<div class="card c-shop"><div class="arrow">→</div><div class="top-icon">🛒</div><div><h3>Shop</h3><span>Groceries & more</span></div></div>
+<div class="card c-green"><div class="arrow">→</div><div class="top-icon">🚚</div><div><h3>Deliveries</h3><span>Fast & safe</span></div></div>
+<div class="card c-orange"><div class="arrow">→</div><div class="top-icon">🍴</div><div><h3>Food & Local</h3><span>Local favourites</span></div></div>
+
+<div class="card c-yellow"><div class="arrow">→</div><div class="top-icon">🎁</div><div><h3>Send</h3><span>Gifts & parcels</span></div></div>
+<div class="card c-green"><div class="arrow">→</div><div class="top-icon">🏠</div><div><h3>Move</h3><span>Furniture & more</span></div></div>
+<div class="card c-blue1"><div class="arrow">→</div><div class="top-icon">🎟️</div><div><h3>Subscribe</h3><span>Save more</span></div></div>
+
+<div class="card c-pink1"><div class="arrow">→</div><div class="top-icon">📅</div><div><h3>Book Ahead</h3><span>Plan your orders</span></div></div>
+<div class="card c-green"><div class="arrow">→</div><div class="top-icon">🏢</div><div><h3>Business</h3><span>For your growth</span></div></div>
+<div class="card c-light"><div class="arrow">→</div><div class="top-icon">⊞</div><div><h3>More</h3><span>Explore all</span></div></div>
+</div>
+
+<div class="req">
+<div class="icon">🔍</div>
+<div><h3>Request Anything</h3><p>Can't find it? Tell us — we'll source it locally.</p></div>
+<button>Request</button>
+</div>
+
+<div class="bulk">
+<div class="badge">BULK ORDERS</div>
+<h2>Big day? Big order?<br>We'll handle it.</h2>
+<p>Weddings, functions, festivals, parties — send your list, we confirm price & delivery.</p>
+<div class="tags">
+<span class="tag">💎 Weddings</span><span class="tag">🪔 Festivals</span><span class="tag">✨ Functions</span><span class="tag">📦 Anything bulk</span>
+</div>
+<button class="bulk-btn"><div><div>Plan a bulk order</div><div style="font-size:12px;opacity:.7">Book at least 3 hours before</div></div>→</button>
+</div>
+
+<div class="sec">
+<div class="sec-head"><div><h2 style="font-size:18px">Local & Homemade</h2><div class="sub">Pickles, podis, snacks & sweets</div></div><div class="view">View all →</div></div>
+<div class="products">
+<div class="prod"><img src="https://images.unsplash.com/photo-1606491956689-2ea866880c84?w=400"><div class="prod-info"><h4>Gaarelu (biyyam)</h4><b>₹249</b></div></div>
+<div class="prod"><img src="https://images.unsplash.com/photo-1586201375761-83865001e31c?w=400"><div class="prod-info"><h4>RAGI PINDI</h4><b>₹75</b></div></div>
+<div class="prod"><img src="https://images.unsplash.com/photo-1593001872095-a0f3d9d6d0d1?w=400"><div class="prod-info"><h4>Sakhinalu (karam)</h4><b>₹279</b></div></div>
+<div class="prod"><img src="https://images.unsplash.com/photo-1589301760014-d929f3979dbc?w=400"><div class="prod-info"><h4>Biyyam upma</h4><b>₹60</b></div></div>
+<div class="prod"><img src="https://images.unsplash.com/photo-1536304929831-ee1ca9d44906?w=400"><div class="prod-info"><h4>Biyyam ravva</h4><b>₹35</b></div></div>
+<div class="prod"><img src="https://images.unsplash.com/photo-1606491956689-2ea866880c84?w=400"><div class="prod-info"><h4>Sakhinalu (white)</h4><b>₹279</b></div></div>
+</div>
+</div>
+
+<div class="sec">
+<h2 style="font-size:18px">Telangana special (on demand)</h2>
+<div class="hscroll">
+<div class="item-card" style="position:relative"><img src="https://images.unsplash.com/photo-1536304929831-ee1ca9d44906?w=300"><div class="plus">+</div><h4>Biyyam pindi</h4><div style="font-size:12px;color:#777">1000g</div><div class="price">₹35</div><div style="font-size:11px;background:#e6f5d0;padding:4px 6px;border-radius:8px;margin-top:4px">👑 ₹32 for members</div><div style="font-size:11px;background:#f0f0f0;padding:3px 8px;border-radius:10px;width:fit-content;margin-top:4px">Available</div><button class="order">Order Now</button></div>
+<div class="item-card" style="position:relative"><img src="https://images.unsplash.com/photo-1606491956689-2ea866880c84?w=300"><div class="plus">+</div><h4>Gaarelu (biyyam)</h4><div style="font-size:12px;color:#777">1kg</div><div class="price">₹249</div><div style="font-size:11px;background:#fff0da;padding:4px 8px;border-radius:10px;width:fit-content;margin-top:4px">Made to order</div><button class="order">Order Now</button></div>
+<div class="item-card" style="position:relative"><img src="https://images.unsplash.com/photo-1593001872095-a0f3d9d6d0d1?w=300"><div class="plus">+</div><h4>Sakhinalu (karam)</h4><div style="font-size:12px;color:#777">1kg</div><div class="price">₹279</div><div style="font-size:11px;background:#fff0da;padding:4px 8px;border-radius:10px;width:fit-content;margin-top:4px">Made to order</div><button class="order">Order Now</button></div>
+</div>
+</div>
+
+<div class="sec">
+<h2 style="font-size:18px">Cravings? Order now</h2><div class="sub">Hey 🙂</div>
+<div class="hscroll">
+<div class="item-card" style="position:relative"><img src="https://images.unsplash.com/photo-1589352313458-1fd6a654e7b5?w=300"><div class="plus">+</div><h4>Freedom groundnut oil (5L)</h4><div style="font-size:12px;color:#777">5l</div><div class="price">₹920</div><div style="font-size:11px;background:#f0f0f0;padding:3px 8px;border-radius:10px;width:fit-content;margin-top:4px">Available</div><button class="order">Order Now</button></div>
+<div class="item-card" style="position:relative"><img src="https://images.unsplash.com/photo-1536304929831-ee1ca9d44906?w=300"><div class="plus">+</div><h4>Biyyam pindi</h4><div style="font-size:12px;color:#777">1000g</div><div class="price">₹35</div><div style="font-size:11px;background:#e6f5d0;padding:4px 6px;border-radius:8px;margin-top:4px">👑 ₹32 for members</div><div style="font-size:11px;background:#f0f0f0;padding:3px 8px;border-radius:10px;width:fit-content;margin-top:4px">Available</div><button class="order">Order Now</button></div>
+<div class="item-card" style="position:relative"><img src="https://images.unsplash.com/photo-1554866585-cd94860890b7?w=300"><div class="plus">+</div><h4>Coco cola (tin)</h4><div style="font-size:12px;color:#777">Per pack</div><div class="price">₹40</div><div style="font-size:11px;background:#f0f0f0;padding:3px 8px;border-radius:10px;width:fit-content;margin-top:4px">Available</div><button class="order">Order Now</button></div>
+</div>
+</div>
+
+<div class="plans">
+<h2 style="font-size:22px">Use SRICART regularly?</h2><p style="font-size:13px;opacity:.9;margin-top:6px">Save more every order with a plan. Zero delivery fee guaranteed.</p>
+<div class="plan-row">
+<div class="plan"><b>SRICART pass</b><p>₹299/month</p></div>
+<div class="plan"><b>SRICART plus</b><p>₹399/month</p></div>
+<div class="plan"><b>SRICART</b><p>₹99/month</p></div>
+</div>
+<button class="view-plans">View all plans →</button>
+</div>
+
+<div class="live">LIVE FROM NOVEMBER 26th November <span>X</span></div>
+
+<div class="sec">
+<h2 style="font-size:20px">Planning something ahead?</h2><div class="sub">Book now. Relax later.</div>
+<div class="plan-grid">
+<div><div class="ic">🌅</div><b style="font-size:14px">Tomorrow Order</b><p style="font-size:12px;color:#777;margin-top:4px">Order for next day</p></div>
+<div><div class="ic" style="background:#e6f0ff">🕐</div><b style="font-size:14px">Schedule Delivery</b><p style="font-size:12px;color:#777;margin-top:4px">Pick date & time</p></div>
+<div><div class="ic" style="background:#ffe9e9">🛍️</div><b style="font-size:14px">Weekend Pre-Book</b><p style="font-size:12px;color:#777;margin-top:4px">Get it on weekend</p></div>
+</div>
+</div>
+
+<div class="sec">
+<h2 style="font-size:18px">TODAY'S PICK</h2>
+<div class="hscroll">
+<div class="item-card"><img src="https://images.unsplash.com/photo-1560806887-1e4cd0b6cbd6?w=300"><h4>Apple</h4><div class="price">₹120</div></div>
+<div class="item-card"><img src="https://images.unsplash.com/photo-1550583724-b2692b85b150?w=300"><h4>Milk</h4><div class="price">₹47</div></div>
+<div class="item-card"><img src="https://images.unsplash.com/photo-1608198093002-ad4e005484ec?w=300"><h4>Egg puff</h4><div class="price">₹40</div></div>
+</div>
+</div>
+
+<div class="sec">
+<h2 style="font-size:18px">Today's Meals</h2><div class="sub">Book your dinner — freshly made, delivered to you.</div>
+<div class="hscroll">
+<div class="item-card" style="min-width:280px"><img src="https://images.unsplash.com/photo-1585937421612-70a008356fbe?w=400" style="height:160px"><h4>BIRYANI</h4><div class="price">₹170 <span style="text-decoration:line-through;color:#888;font-size:12px">₹220</span></div><button class="order" style="background:#0b6a2e">Book Meal →</button></div>
+<div class="item-card" style="min-width:280px"><img src="https://images.unsplash.com/photo-1565557623262-b51c2513a641?w=400" style="height:160px"><h4>Meals</h4><div class="price">₹150</div><button class="order">Book Meal →</button></div>
+</div>
+</div>
+
+<div class="brand">
+<div style="border:1px solid #ffffff55;display:inline-block;padding:6px 14px;border-radius:20px;font-size:11px;letter-spacing:1px">🟡 NOW IN ADILABAD · BE PART OF IT</div>
+<h2 style="margin-top:14px">Bring <span>your brand</span> to every home in Adilabad</h2>
+<p>Sell, cook, serve, deliver or promote with SRICART — we bring the customers, you run what you love.</p>
+<button class="join">Join SRICART →</button>
+<button class="whats">💬 Ask on WhatsApp</button>
+<div class="small-tags">
+<span>🛒 Seller</span><span>🍴 Vendor</span><span>🏠 Sell Homemade</span>
+</div>
+<div style="margin-top:14px;font-size:12px">✔️ Free to apply &nbsp; ✔️ Takes about 2 minutes<br>✔️ Add photos from your phone</div>
+</div>
+
+<div class="sec" style="margin-bottom:20px">
+<h2 style="font-size:18px">REVIEW</h2>
+</div>
+
+</div>
+
+<div class="bottom">
+<div class="nav active"><div class="ico">🏠</div>Home</div>
+<div class="nav"><div class="ico">⊞</div>Categories</div>
+<div class="nav"><div class="ico">🛒</div>Cart</div>
+<div class="nav"><div class="ico">📍</div>Food & Local</div>
+<div class="nav"><div class="ico">···</div>More</div>
+</div>
+
+<script>
+let i=0;
+const titles=["You order we deliver","Order now"];
+const subs=["Anything and everything","Be the first in our list"];
+const btns=["Shop Now →","Explore →"];
+setInterval(()=>{
+ i=i==0?1:0;
+ document.getElementById('heroTitle').innerText=titles[i];
+ document.getElementById('heroSub').innerText=subs[i];
+ document.getElementById('heroBtn').innerText=btns[i];
+ document.querySelectorAll('.dot').forEach((d,idx)=>d.classList.toggle('active',idx==i));
+},3000);
+</script>
+</body>
+                                                                                                                                                                               </html>
