@@ -78,5 +78,9 @@ let slides=[{t:"Order now",s:"Be the first in our list",b:"Explore →"},{t:"You
 setInterval(()=>{i=(i+1)%2;h1.textContent=slides[i].t;pp.textContent=slides[i].s;btn.textContent=slides[i].b;document.getElementById('d0').style.width=i==0?'18px':'6px';document.getElementById('d0').style.background=i==0?'#0B6A2F':'#C8D6C8';document.getElementById('d1').style.width=i==1?'18px':'6px';document.getElementById('d1').style.background=i==1?'#0B6A2F':'#C8D6C8';},3000);
 let words=["your shop","your kitchen","your bike","your brand","your stay"];let wi=0;setInterval(()=>{wi=(wi+1)%words.length;document.getElementById('joinWord').textContent=words[wi];},2500);
 document.querySelectorAll('.hscroll,.rev,.plan-row,.join-chips').forEach(row=>{let dir=1;setInterval(()=>{if(row.scrollLeft+row.clientWidth>=row.scrollWidth-5)dir=-1;if(row.scrollLeft<=0)dir=1;row.scrollBy({left:dir*160,behavior:'smooth'});},2800);});
+let s=document.querySelector('.search');
+s.outerHTML='<input id="searchBox" class="search" placeholder="🔍 Search products, pages, services..." style="width:100%;border:none;outline:none">';
+let inp=document.getElementById('searchBox');
+inp.addEventListener('input',function(){let q=this.value.toLowerCase();document.querySelectorAll('.hcard,.box,.prod').forEach(el=>{el.style.display=el.textContent.toLowerCase().includes(q)?'':'none';});});
 </script>
 </body></html>
