@@ -1,0 +1,65 @@
+<!DOCTYPE html><html><head><meta name="viewport" content="width=device-width,initial-scale=1"><title>SRICART - Categories</title><style>*{margin:0;padding:0;box-sizing:border-box}body{font-family:system-ui;background:#F2F7F2;padding-bottom:80px}.top{background:#0B6A2F;color:#fff;padding:10px 14px;display:flex;justify-content:space-between;align-items:center;position:sticky;top:0;z-index:10}.top b{font-size:19px}.top small{font-size:11px;opacity:.9}.hdr{background:#fff;padding:10px 14px}.search{width:100%;padding:11px 12px;border-radius:22px;border:1px solid #ddd;background:#F5F5F5;outline:none;font-size:14px}.green{background:#0B6A2F;color:#fff;margin:10px 14px;padding:14px;border-radius:14px;display:flex;gap:10px;align-items:center}.green h2{font-size:20px}.green small{opacity:.85}.join{background:#EAF7EC;margin:10px 14px;padding:12px;border-radius:12px;display:flex;justify-content:space-between;align-items:center}.join button{background:#0B6A2F;color:#fff;border:none;padding:7px 12px;border-radius:20px}.sub{padding:0 14px;font-size:13px;color:#333}.search2{display:flex;gap:8px;padding:10px 14px}.search2 input{flex:1;padding:11px;border-radius:10px;border:1px solid #ddd}.search2 button{background:#0B6A2F;color:#fff;border:none;padding:0 16px;border-radius:10px}.basket{background:linear-gradient(90deg,#FF6B35,#FF8A50);color:#fff;margin:0 14px;padding:14px;border-radius:14px;display:flex;justify-content:space-between;align-items:center}.basket button,.req button{background:#fff;border:none;padding:8px 12px;border-radius:20px;font-weight:700}.req{background:linear-gradient(90deg,#0B6A2F,#1A9A4A);color:#fff;margin:10px 14px;padding:14px;border-radius:14px;display:flex;justify-content:space-between;align-items:center}.sec{padding:12px 14px}.sec h3{font-size:16px;margin-bottom:10px}.grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:10px}.card{background:#fff;border-radius:14px;overflow:hidden;text-align:left;padding-bottom:8px;box-shadow:0 1px 4px rgba(0,0,0,.06);cursor:pointer}.card .img{height:72px;display:flex;align-items:center;justify-content:center;font-size:34px}.card p{font-size:12px;font-weight:600;padding:6px 8px;line-height:1.2}.hscroll{display:flex;gap:10px;overflow-x:auto;padding-bottom:4px}.hscroll .card{min-width:130px}
+</style></head><body>
+<div class="top"><div><b>🅂 SRICART</b><br><small>Delivering to: 📍 Adilabad</small></div><div style="font-size:20px">🔔 &nbsp; 📞 &nbsp; 📋</div></div>
+<div class="hdr"><input class="search" id="topSearch" placeholder="🔍 Search products, pages, services..." onkeyup="filterCat(this.value)"></div>
+<div class="green"><span style="font-size:22px">←</span><div><h2>All Categories</h2><small>📍 Adilabad</small></div></div>
+<div class="join"><div>👥 <b id="joinTxt">Become a Vendor — open your shop</b></div><button>Join →</button></div>
+<p class="sub">Everything SRICART can bring to your door</p>
+<div class="search2"><input id="catSearch" placeholder="Search products, baskets, meals..." onkeyup="filterCat(this.value)"><button>Search</button></div>
+<div class="basket"><div><b>🧺 Make your basket</b><br><small>Type anything you need — we shop it locally and send you a price</small></div><button>Start →</button></div>
+<div class="req"><div><b>🔍 Request Anything</b><br><small>Can't find it? Tell us — we'll source it locally.</small></div><button>Request</button></div>
+<div class="sec"><h3>🛒 Food & Groceries</h3><div class="grid" id="foodGrid">
+<div class="card" onclick="openCat('Rice & Grains')"><div class="img" style="background:#FFF3D6">🍚</div><p>Rice & Grains</p></div>
+<div class="card" onclick="openCat('Fruits')"><div class="img" style="background:#FFE8CC">🍎</div><p>Fruits</p></div>
+<div class="card" onclick="openCat('Vegetables')"><div class="img" style="background:#D6F5D6">🥦</div><p>Vegetables</p></div>
+<div class="card" onclick="openCat('Meat & Fish')"><div class="img" style="background:#D6F0FF">🐟</div><p>Meat & Fish</p></div>
+<div class="card" onclick="openCat('Dairy & Eggs')"><div class="img" style="background:#FFF8D6">🧀</div><p>Dairy & Eggs</p></div>
+<div class="card" onclick="openCat('Snacks & Sweets')"><div class="img" style="background:#FFE0E0">🍩</div><p>Snacks & Sweets</p></div>
+<div class="card" onclick="openCat('Drinks')"><div class="img" style="background:#E8D6FF">🥤</div><p>Drinks</p></div>
+<div class="card" onclick="openCat('Puja')"><div class="img" style="background:#FFD6E8">🪔</div><p>Puja</p></div>
+<div class="card" onclick="openCat('Baby care')"><div class="img" style="background:#D6F5FF">👶</div><p>Baby care</p></div>
+<div class="card" onclick="openCat('Bakery')"><div class="img" style="background:#D6FFD6">🍞</div><p>Bakery</p></div>
+<div class="card" onclick="openCat('Rice & flour')"><div class="img" style="background:#FFD6C2">🌾</div><p>Rice & flour</p></div>
+<div class="card" onclick="openCat('Other')"><div class="img" style="background:#D6FFC2">🛍️</div><p>Other</p></div>
+</div></div>
+<div class="sec"><h3>🏠 Home & Kitchen</h3><div class="grid">
+<div class="card" onclick="openCat('Household')"><div class="img" style="background:#FFE8CC">🧹</div><p>Household</p></div>
+<div class="card" onclick="openCat('Furniture')"><div class="img" style="background:#D6F0FF">🛋️</div><p>Furniture</p></div>
+</div></div>
+<div class="sec"><h3>🍲 Local & Homemade</h3><div class="hscroll">
+<div class="card" onclick="openCat('Home Food')"><div class="img" style="background:#FFE8CC">🍛</div><p>Home Food</p></div>
+<div class="card" onclick="openCat('Tiffin')"><div class="img" style="background:#D6F5D6">🍱</div><p>Tiffin</p></div>
+<div class="card" onclick="openCat('Tailoring')"><div class="img" style="background:#FFE0E0">🧵</div><p>Tailoring</p></div>
+</div></div>
+<div class="sec"><h3>🎁 Gifts</h3><div class="hscroll">
+<div class="card" onclick="openCat('Cakes')"><div class="img" style="background:#FFD6E8">🎂</div><p>Cakes</p></div>
+<div class="card" onclick="openCat('Flowers')"><div class="img" style="background:#FFD6C2">🌸</div><p>Flowers</p></div>
+<div class="card" onclick="openCat('Gift Delivery')"><div class="img" style="background:#D6F0FF">🎁</div><p>Gift Delivery</p></div>
+</div></div>
+<div class="sec"><h3>📱 Electronics</h3><div class="grid">
+<div class="card" onclick="openCat('Mobile Accessories')"><div class="img" style="background:#E8D6FF">📱</div><p>Mobile Accessories</p></div>
+</div></div>
+<div class="sec"><h3>📚 Education</h3><div class="grid">
+<div class="card" onclick="openCat('Books')"><div class="img" style="background:#FFF3D6">📚</div><p>Books</p></div>
+</div></div>
+<div class="sec"><h3>💄 Personal</h3><div class="grid">
+<div class="card" onclick="openCat('Beauty')"><div class="img" style="background:#FFD6E8">💄</div><p>Beauty</p></div>
+</div></div>
+<div class="sec"><h3>🔧 Services</h3><div class="hscroll">
+<div class="card" onclick="openCat('Gift Delivery Service')"><div class="img" style="background:#D6F5FF">🚚</div><p>Gift Delivery</p></div>
+<div class="card" onclick="openCat('Craving Something?')"><div class="img" style="background:#FFE8CC">😋</div><p>Craving Something?</p></div>
+<div class="card" onclick="openCat('Sell Homemade')"><div class="img" style="background:#D6FFD6">🏠</div><p>Sell Homemade</p></div>
+</div></div>
+<div style="position:fixed;bottom:0;left:0;right:0;background:#fff;display:flex;border-top:1px solid #ddd;padding:8px 0;z-index:20">
+<div onclick="location.href='test.html'" style="flex:1;text-align:center;font-size:11px;cursor:pointer">🏠<br>Home</div>
+<div style="flex:1;text-align:center;font-size:11px;color:#0B6A2F;font-weight:700">📂<br>Categories</div>
+<div onclick="location.href='test.html'" style="flex:1;text-align:center;font-size:11px;cursor:pointer">🛒<br>Cart</div>
+<div onclick="location.href='test.html'" style="flex:1;text-align:center;font-size:11px;cursor:pointer">🍲<br>Food & Local</div>
+<div onclick="location.href='test.html'" style="flex:1;text-align:center;font-size:11px;cursor:pointer">⋯<br>More</div>
+</div>
+<script>
+var msgs=["Become a Vendor — open your shop","Sell Homemade — Tiffins, Pickles & more","Become a Rider — earn with SRICART"];var mi=0;setInterval(function(){mi=(mi+1)%msgs.length;document.getElementById('joinTxt').innerText=msgs[mi]},2500);
+function filterCat(v){v=v.toLowerCase();document.querySelectorAll('.card').forEach(function(c){c.style.display=c.innerText.toLowerCase().includes(v)?'':'none'})}
+function openCat(n){alert(n+' - Products coming soon! Firebase connect chesaka ikkada products vasthayi.')}
+</script>
+</body></html>
