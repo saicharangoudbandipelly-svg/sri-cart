@@ -83,4 +83,5 @@ s.outerHTML='<input id="searchBox" class="search" placeholder="🔍 Search produ
 let inp=document.getElementById('searchBox');
 inp.addEventListener('input',function(){let q=this.value.toLowerCase();document.querySelectorAll('.hcard,.box,.prod').forEach(el=>{el.style.display=el.textContent.toLowerCase().includes(q)?'':'none';});});
 </script>
+<script>document.querySelectorAll('*').forEach(e=>{if(e.innerText=='Categories'){e.style.cursor='pointer';e.onclick=()=>location.href='categories.html'}})</script>
 </body></html>
