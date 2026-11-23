@@ -83,5 +83,5 @@ s.outerHTML='<input id="searchBox" class="search" placeholder="🔍 Search produ
 let inp=document.getElementById('searchBox');
 inp.addEventListener('input',function(){let q=this.value.toLowerCase();document.querySelectorAll('.hcard,.box,.prod').forEach(el=>{el.style.display=el.textContent.toLowerCase().includes(q)?'':'none';});});
 </script>
-<script>document.addEventListener('click',function(e){let c=e.target.closest('div');if(!c)return;let t=c.textContent||'';if(t.includes('Shop'))location.href='store.html';else if(t.includes('Categories'))location.href='categories.html';else if(t.includes('Cart'))location.href='cart.html';else if(t.includes('Home'))location.href='test.html';});</script>
+<script>document.addEventListener('click',function(e){let el=e.target;for(let i=0;i<6&&el;i++){let t=el.textContent||'';if(t.length<200){if(t.includes('Shop')){location.href='store.html';return;}if(t.includes('Categories')){location.href='categories.html';return;}if(t.includes('Cart')){location.href='cart.html';return;}if(t.includes('Home')){location.href='test.html';return;}}el=el.parentElement;}});</script>
 </body></html>
